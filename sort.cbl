@@ -1,0 +1,49 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SORT-STUDENT-GRADES.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT INPUT-FILE ASSIGN TO 'INPUT.TXT'
+               ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT OUTPUT-FILE ASSIGN TO 'OUTPUT.TXT'
+               ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT SORT-WORK ASSIGN TO 'SORT.TXT'.
+
+       DATA DIVISION.
+       FILE SECTION.
+
+       FD INPUT-FILE.
+       01 INPUT-RECORD.
+           05 STUDENT-NAME      PIC X(20).
+           05 STUDENT-SURNAME   PIC X(20).
+           05 STUDENT-GRADE     PIC 99.
+
+       FD OUTPUT-FILE.
+       01 OUTPUT-RECORD.
+           05 OUT-STUDENT-NAME  PIC X(20).
+           05 OUT-STUDENT-SURNAME PIC X(20).
+           05 OUT-STUDENT-GRADE PIC 99.
+
+       SD SORT-WORK.
+       01 SORT-RECORD.
+           05 W-STUDENT-NAME    PIC X(20).
+           05 W-STUDENT-SURNAME PIC X(20).
+           05 W-STUDENT-GRADE   PIC 99.
+
+       WORKING-STORAGE SECTION.
+       01 EOF-FLAG              PIC X VALUE 'N'.
+           88 EOF               VALUE 'Y'.
+           88 NOT-EOF           VALUE 'N'.
+
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           SORT SORT-WORK
+               ON ASCENDING KEY W-STUDENT-GRADE
+               USING INPUT-FILE
+               GIVING OUTPUT-FILE.
+
+       DISPLAY "Student data sorted by grade and written to OUTPUT.TXT".
+
+       STOP RUN.
+       END PROGRAM SORT-STUDENT-GRADES.
