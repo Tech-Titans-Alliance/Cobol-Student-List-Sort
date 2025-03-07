@@ -72,7 +72,11 @@ This section contains the logic for reading, sorting, and writing records:
 
 
 ## Contact 📬
+<<<<<<< HEAD
 For any questions or suggestions, feel free to open an issue or contact me!
+=======
+For any questions or suggestions, feel free to open an issue or contact !
+>>>>>>> bdb659ad6e7a7068f36988c7eaca44e6b6e90969
 
 ---
 
