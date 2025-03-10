@@ -39,7 +39,7 @@ This section contains the logic for reading, sorting, and writing records:
 - The program sorts the data by `STUDENT-GRADE` in ascending order using the `SORT` statement.
 
 ## Execution Flow 🔄
-1. The program opens the input file (`students.dat`) and reads the records one by one.
+1. The program opens the input file (`students.txt`) and reads the records one by one.
 2. Each record is moved to the sort work file for sorting.
 3. Once all records are read, the program performs a sort on the records based on the student grade.
 4. After sorting, the program writes the sorted records to the output file (`sorted_students.dat`).
