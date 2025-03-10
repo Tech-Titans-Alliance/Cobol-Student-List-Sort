@@ -4,10 +4,10 @@
 The `SORTSTUDENTS` COBOL program is designed to read a list of student names and grades from a file, sort the records in ascending order based on the student grades, and then write the sorted records to a new output file. The program utilizes COBOL's `SORT` mechanism with a key (student grade) to organize the data. 🧑‍🎓🔢
 
 ## File Input and Output 📂
-- **Input File**: `students.dat`  
+- **Input File**: `students.txt`  
   The input file should contain student records with their names and grades. Each student record should consist of a 30-character student name and a 2-digit grade.
   
-- **Output File**: `sorted_students.dat`  
+- **Output File**: `sorted_students.txt`  
   The program generates an output file containing the student records sorted by grades in ascending order.
 
 - **Temporary Sorting File**: `SORTWORK`  
@@ -50,7 +50,7 @@ This section contains the logic for reading, sorting, and writing records:
 3. Run the program. The sorted list of students will be saved in the `sorted_students.dat` file.
 
 ## Example 📑
-- **Input** (`students.dat`):
+- **Input** (`students.txt`):
     ```
     John Doe      85
     Jane Smith    92
@@ -58,7 +58,7 @@ This section contains the logic for reading, sorting, and writing records:
     Maria Lee     89
     ```
 
-- **Output** (`sorted_students.dat`):
+- **Output** (`sorted_students.txt`):
     ```
     Alex Johnson  75
     John Doe      85
